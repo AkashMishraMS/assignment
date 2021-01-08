@@ -1,0 +1,25 @@
+.container {
+    border:1px solid black;
+    padding:20px;
+    display:flex;
+    flex-wrap:wrap;
+    text-align: left;
+}
+
+.box {
+    border:1px solid black;
+    padding:20px;
+    width: 280px;
+    margin:10px;
+    position: relative;
+}
+
+.trash {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.edit {
+ margin: 5px;
+}
