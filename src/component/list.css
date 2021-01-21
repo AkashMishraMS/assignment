@@ -23,3 +23,19 @@
 .edit {
  margin: 5px;
 }
+
+.form-input {
+    background: none;
+    background-color: white;
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+     width: 100%; 
+     border: none;
+     border-radius: 0;
+    }
+
+    .form-input:hover {
+            border-bottom: 1px solid #000;
+    }
+

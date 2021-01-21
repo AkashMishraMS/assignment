@@ -90,9 +90,24 @@ handleDestinationSave = () => {
     //API CALL
 }
 
+updateComment = (e, id) => {
+  console.log(e, id)    
+  // api call
+} 
+
   render() {
     const { eventData } = this.state
     console.log('eventData', eventData)
+    // let sortBasedonDate = eventData.filter((value, index) => {
+    //     // console.log('date', new Date(value.start) - new Date())  
+    // })
+    let tempData = eventData.sort((a, b) => {
+      // console.log('a, b',a, b)
+      return new Date(a.start) - new Date(b.start)
+      // return a - b
+    })
+    console.log('temp',tempData, )
+
     return (
       <div>
         <h1>I am List</h1>
@@ -128,8 +143,15 @@ handleDestinationSave = () => {
       <button onClick={(e) => this.handleCommentCancel(e, i.id)}>Cancel</button>
       </React.Fragment>
   ) : (
-    <p>comment  - {i.comment} <button onClick={(e) => this.onEditComment(e, i.id)}>
-    <i className="fas fa-edit edit"></i></button></p>
+    <div> 
+     <span> comment - </span> 
+   <input 
+    type='text'
+    value = {i.comment}
+    className='form-input' 
+    onChange = {(e) => this.updateComment(e, i.id)}
+   /> 
+   </div>
   )} 
   </div>
 ))}
